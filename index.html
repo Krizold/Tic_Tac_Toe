@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Morpion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Titre du jeu -->
+    <h1>Jeu du Morpion - 3 manches</h1>
+    <!-- Affichage du tour du joueur -->
+    <h2 id="playerTurn">Au tour de Joueur 1 (X)</h2>
+    <!-- Grille de jeu -->
+    <div id="gameBoard">
+        <!-- Chaque ligne de la grille -->
+        <div class="row">
+            <!-- Chaque cellule de la grille, avec gestion de l'événement "click" -->
+            <div class="cell" onclick="makeMove(0, 0)"></div>
+            <div class="cell" onclick="makeMove(0, 1)"></div>
+            <div class="cell" onclick="makeMove(0, 2)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" onclick="makeMove(1, 0)"></div>
+            <div class="cell" onclick="makeMove(1, 1)"></div>
+            <div class="cell" onclick="makeMove(1, 2)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" onclick="makeMove(2, 0)"></div>
+            <div class="cell" onclick="makeMove(2, 1)"></div>
+            <div class="cell" onclick="makeMove(2, 2)"></div>
+        </div>
+    </div>
+    <!-- Informations sur la partie : manche et score -->
+    <div id="gameInfo">
+        <h3>Manche : <span id="round">1</span>/3</h3>
+        <h3>Score :</h3>
+        <p>Joueur 1 (X) : <span id="scoreP1">0</span></p>
+        <p>Joueur 2 (O) : <span id="scoreP2">0</span></p>
+    </div>
+    <!-- Bouton pour réinitialiser le jeu -->
+    <button id="resetButton" onclick="resetGame()">Réinitialiser</button>
+    <script src="script.js"></script>
+</body>
+</html>
